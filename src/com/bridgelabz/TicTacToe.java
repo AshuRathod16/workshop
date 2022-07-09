@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class TicTacToe {
 
     public static char[] gameArray = new char[10];
+    public static char user = '1';
+    public static char userTurn;
+    public static int userPos;
 
     public static Scanner scanner = new Scanner(System.in);
 
@@ -14,6 +17,7 @@ public class TicTacToe {
         ticTacToeGame();
         showBoard();
         userChoice();
+        moveLocation();
 
     }
 
@@ -37,4 +41,70 @@ public class TicTacToe {
         }
     }
 
+    // method to move to valid cell
+    public static void moveLocation() {
+        if (user == '1') {
+            System.out.print("\nSelect the position in board from range [1 - 9] : ");
+            userPos = scanner.nextInt();
+
+            switch (userPos) {
+                case 1:
+                    if (gameArray[1] == ' ') {
+                        gameArray[1] = userTurn;
+                    }
+                    break;
+
+                case 2:
+                    if (gameArray[2] == ' ') {
+                        gameArray[2] = userTurn;
+                    }
+                    break;
+
+                case 3:
+                    if (gameArray[3] == ' ') {
+                        gameArray[3] = userTurn;
+                    }
+                    break;
+
+                case 4:
+                    if (gameArray[4] == ' ') {
+                        gameArray[4] = userTurn;
+                    }
+                    break;
+
+                case 5:
+                    if (gameArray[5] == ' ') {
+                        gameArray[5] = userTurn;
+                    }
+                    break;
+
+                case 6:
+                    if (gameArray[6] == ' ') {
+                        gameArray[6] = userTurn;
+                    }
+                    break;
+
+                case 7:
+                    if (gameArray[7] == ' ') {
+                        gameArray[7] = userTurn;
+                    }
+                    break;
+
+                case 8:
+                    if (gameArray[8] == ' ') {
+                        gameArray[8] = userTurn;
+                    }
+                    break;
+
+                case 9:
+                    if (gameArray[9] == ' ') {
+                        gameArray[9] = userTurn;
+                    }
+                    break;
+
+                default:
+                    System.out.println("Invalid Position");
+            }
+        }
+    }
 }
