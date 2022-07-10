@@ -8,6 +8,8 @@ public class TicTacToe {
     public static char user = '1';
     public static char userTurn;
     public static int userPos;
+    public static int computerPos;
+    public static char computerTurn;
 
     public static Scanner scanner = new Scanner(System.in);
 
@@ -18,6 +20,7 @@ public class TicTacToe {
         showBoard();
         userChoice();
         moveLocation();
+        computerMove();
 
     }
 
@@ -107,4 +110,71 @@ public class TicTacToe {
             }
         }
     }
+
+    public static void computerMove() {
+        boolean flag = false;
+        while (true) {
+            computerPos = (int) (Math.random() * 8);
+            switch (computerPos) {
+                case 1:
+                    if (gameArray[1] == ' ') {
+                        gameArray[1] = computerTurn;
+                        flag = true;
+                    }
+                    break;
+                case 2:
+                    if (gameArray[2] == ' ') {
+                        gameArray[2] = computerTurn;
+                        flag = true;
+                    }
+                    break;
+                case 3:
+                    if (gameArray[3] == ' ') {
+                        gameArray[3] = computerTurn;
+                        flag = true;
+                    }
+                    break;
+                case 4:
+                    if (gameArray[4] == ' ') {
+                        gameArray[4] = computerTurn;
+                        flag = true;
+                    }
+                    break;
+                case 5:
+                    if (gameArray[5] == ' ') {
+                        gameArray[5] = computerTurn;
+                        flag = true;
+                    }
+                    break;
+                case 6:
+                    if (gameArray[6] == ' ') {
+                        gameArray[6] = computerTurn;
+                        flag = true;
+                    }
+                    break;
+                case 7:
+                    if (gameArray[7] == ' ') {
+                        gameArray[7] = computerTurn;
+                        flag = true;
+                    }
+                    break;
+                case 8:
+                    if (gameArray[8] == ' ') {
+                        gameArray[8] = computerTurn;
+                        flag = true;
+                    }
+                    break;
+                case 9:
+                    if (gameArray[9] == ' ') {
+                        gameArray[9] = computerTurn;
+                        flag = true;
+                    }
+                    break;
+            }
+            if (flag){
+                break;
+            }
+        }
+    }
 }
+
